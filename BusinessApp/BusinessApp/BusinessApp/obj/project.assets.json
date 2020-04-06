@@ -35,6 +35,19 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "PCLAppConfig/1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/PCLAppConfig.FileSystemStream.Abstractions.dll": {},
+          "lib/netstandard2.0/PCLAppConfig.FileSystemStream.dll": {},
+          "lib/netstandard2.0/PCLAppConfig.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/PCLAppConfig.FileSystemStream.Abstractions.dll": {},
+          "lib/netstandard2.0/PCLAppConfig.FileSystemStream.dll": {},
+          "lib/netstandard2.0/PCLAppConfig.dll": {}
+        }
+      },
       "Xamarin.Forms/4.5.0.530": {
         "type": "package",
         "compile": {
@@ -227,6 +240,32 @@
         "newtonsoft.json.12.0.3.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
+      ]
+    },
+    "PCLAppConfig/1.0.1": {
+      "sha512": "9ka5H/D0x1wpYsJUWzR+S+Teh7VNRAP5c1UZg3vNCttlG+W9ls/VcGDWKuAHCPgQfhhJ5ejJqZ05tq9cXy3OfQ==",
+      "type": "package",
+      "path": "pclappconfig/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/PCLAppConfig.FileSystemStream.Abstractions.dll",
+        "lib/MonoAndroid10/PCLAppConfig.FileSystemStream.dll",
+        "lib/MonoAndroid10/PCLAppConfig.dll",
+        "lib/MonoTouch10/PCLAppConfig.FileSystemStream.Abstractions.dll",
+        "lib/MonoTouch10/PCLAppConfig.FileSystemStream.dll",
+        "lib/MonoTouch10/PCLAppConfig.dll",
+        "lib/UAP10/PCLAppConfig.FileSystemStream.Abstractions.dll",
+        "lib/UAP10/PCLAppConfig.FileSystemStream.dll",
+        "lib/UAP10/PCLAppConfig.dll",
+        "lib/Xamarin.iOS/PCLAppConfig.FileSystemStream.Abstractions.dll",
+        "lib/Xamarin.iOS/PCLAppConfig.FileSystemStream.dll",
+        "lib/Xamarin.iOS/PCLAppConfig.dll",
+        "lib/netstandard2.0/PCLAppConfig.FileSystemStream.Abstractions.dll",
+        "lib/netstandard2.0/PCLAppConfig.FileSystemStream.dll",
+        "lib/netstandard2.0/PCLAppConfig.dll",
+        "pclappconfig.1.0.1.nupkg.sha512",
+        "pclappconfig.nuspec"
       ]
     },
     "Xamarin.Forms/4.5.0.530": {
@@ -546,6 +585,7 @@
     ".NETStandard,Version=v2.0": [
       "NETStandard.Library >= 2.0.3",
       "Newtonsoft.Json >= 12.0.3",
+      "PCLAppConfig >= 1.0.1",
       "Xamarin.Forms >= 4.5.0.530"
     ]
   },
@@ -599,6 +639,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[12.0.3, )"
+          },
+          "PCLAppConfig": {
+            "target": "Package",
+            "version": "[1.0.1, )"
           },
           "Xamarin.Forms": {
             "target": "Package",
