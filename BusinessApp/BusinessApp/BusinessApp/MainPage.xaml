@@ -5,10 +5,7 @@
              x:Class="BusinessApp.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Image x:Name="logo"  Source="logoTuIdentidad.jpg"/>
     </StackLayout>
 
 </ContentPage>

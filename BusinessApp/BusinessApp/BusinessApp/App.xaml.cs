@@ -11,7 +11,7 @@ namespace BusinessApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new View.MenuDesplegable();
         }
 
         protected override void OnStart()
