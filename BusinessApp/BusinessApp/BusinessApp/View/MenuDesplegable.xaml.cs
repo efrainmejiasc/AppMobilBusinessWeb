@@ -74,6 +74,7 @@ namespace BusinessApp.View
             }
 
         } 
+        //  DisplayAlert("Informacion del sistema", "Conexion a internet no disponible,asegurese estar conectado a una red Wifi", "Cerrar");
 
     }
 

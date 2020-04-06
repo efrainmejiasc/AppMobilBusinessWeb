@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Collections.Generic;
 using System.Text;
 
@@ -15,6 +16,8 @@ namespace BusinessApp.Engine
             }
             return valor;
         }
+
+        public static string UrlBase = ConfigurationManager.AppSettings["URL_BASE"];
 
         public static string NombreBaseDatos = "AppBusiness.db";
         public static string Folder = System.Environment.GetFolderPath(Environment.SpecialFolder.Personal);
