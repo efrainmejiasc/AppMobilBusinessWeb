@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BusinessApp.ViewModels"
+             x:Class="BusinessApp.View.FacturaEntrada">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="#D8D8D8">
+
+                <Label Text="FACTURA DE VENTA" VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand"  TextColor="Black" FontAttributes="Bold" Margin="20, 0, 0, 0"/>
+                <Label x:Name="miRazonSocial" TextColor="DimGray"  FontSize="18" FontAttributes="Bold" Margin="20, 0, 0, 0"></Label>
+                <Label x:Name="miRif" TextColor="DimGray"  FontSize="18" FontAttributes="Bold" Margin="20, 0, 0, 0"></Label>
+                <Label x:Name="nroFactura" TextColor="DimGray"  FontSize="18" FontAttributes="Bold" Margin="20, 0, 0, 0"></Label>
+                <DatePicker x:Name="fecha" Format="dd/MM/yyyy" VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand" Margin="20, 0, 0, 0" TextColor="DimGray"  FontSize="18" BackgroundColor="#FBF5EF"/>
+                
+                <Label Text="Razon Social" VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand"  TextColor="DimGray" FontAttributes="Bold" Margin="20, 0, 0, 0"/>
+                <local:BorderedEntry x:Name="tuRazonSocial"  VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand"  WidthRequest="360" HeightRequest="40" Margin="20, 0, 20, 0" HorizontalTextAlignment="Start" FontSize="12" BackgroundColor="#FBF5EF"></local:BorderedEntry>
+                <Label Text="Domicilio Fiscal" VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand"  TextColor="DimGray" FontAttributes="Bold" Margin="20, 0, 0, 0"/>
+                <local:BorderedEntry x:Name="domicilio" VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand"  WidthRequest="360" HeightRequest="40" Margin="20, 0, 20, 0" HorizontalTextAlignment="Start" FontSize="12" BackgroundColor="#FBF5EF"></local:BorderedEntry>
+                <Label Text="RIF" VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand"  TextColor="DimGray" FontAttributes="Bold" Margin="20, 0, 0, 0"/>
+                <local:BorderedEntry x:Name="tuRif" VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand"  WidthRequest="360" HeightRequest="40" Margin="20, 0, 20, 0" HorizontalTextAlignment="Start" FontSize="12" BackgroundColor="#FBF5EF"></local:BorderedEntry>
+            <Picker
+                WidthRequest="320"
+                HorizontalOptions="FillAndExpand" TextColor="DimGray" FontSize="16" BackgroundColor="#FBF5EF"> 
+                <Picker.Items>
+                    <x:String>Seleccione Metodo de Pago</x:String>
+                    <x:String>Contado</x:String>
+                    <x:String>Credito</x:String>
+                </Picker.Items>
+                <Picker.SelectedIndex>0</Picker.SelectedIndex>
+            </Picker>
+
+                <Grid  VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand"  WidthRequest="320" Margin="10, 0, 5, 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Cant." Grid.Row="0" Grid.Column="0" />
+                    <local:BorderedEntry Grid.Row="1" Grid.Column="0" FontSize="10" Keyboard="Numeric" BackgroundColor="#A9F5E1"></local:BorderedEntry>
+                    <local:BorderedEntry Grid.Row="2" Grid.Column="0" FontSize="10" Keyboard="Numeric" BackgroundColor="#A9F5BC"></local:BorderedEntry>
+                    <local:BorderedEntry Grid.Row="3" Grid.Column="0" FontSize="10" Keyboard="Numeric" BackgroundColor="#A9F5E1"></local:BorderedEntry>
+                    <local:BorderedEntry Grid.Row="4" Grid.Column="0" FontSize="10" Keyboard="Numeric" BackgroundColor="#A9F5BC"></local:BorderedEntry>
+                    <local:BorderedEntry Grid.Row="5" Grid.Column="0" FontSize="10" Keyboard="Numeric" BackgroundColor="#A9F5E1"></local:BorderedEntry>
+                    <Label Text=" DESCRIPCION " Grid.Row="0" Grid.Column="1" />
+                    <local:BorderedEntry Grid.Row="1" Grid.Column="1" FontSize="10" BackgroundColor="#A9F5E1"></local:BorderedEntry>
+                    <local:BorderedEntry Grid.Row="2" Grid.Column="1" FontSize="10" BackgroundColor="#A9F5BC"></local:BorderedEntry>
+                    <local:BorderedEntry Grid.Row="3" Grid.Column="1" FontSize="10" BackgroundColor="#A9F5E1"></local:BorderedEntry>
+                    <local:BorderedEntry Grid.Row="4" Grid.Column="1" FontSize="10" BackgroundColor="#A9F5BC"></local:BorderedEntry>
+                    <local:BorderedEntry Grid.Row="5" Grid.Column="1" FontSize="10" BackgroundColor="#A9F5E1"></local:BorderedEntry>
+                    <Label Text="Prec Uni." Grid.Row="0" Grid.Column="2" />
+                    <local:BorderedEntry Grid.Row="1" Grid.Column="2" FontSize="10" Keyboard="Numeric" BackgroundColor="#A9F5E1"></local:BorderedEntry>
+                    <local:BorderedEntry Grid.Row="2" Grid.Column="2" FontSize="10" Keyboard="Numeric" BackgroundColor="#A9F5BC"></local:BorderedEntry>
+                    <local:BorderedEntry Grid.Row="3" Grid.Column="2" FontSize="10" Keyboard="Numeric" BackgroundColor="#A9F5E1"></local:BorderedEntry>
+                    <local:BorderedEntry Grid.Row="4" Grid.Column="2" FontSize="10" Keyboard="Numeric" BackgroundColor="#A9F5BC"></local:BorderedEntry>
+                    <local:BorderedEntry Grid.Row="5" Grid.Column="2" FontSize="10" Keyboard="Numeric" BackgroundColor="#A9F5E1"></local:BorderedEntry>
+                    <Label Text="SubTot." Grid.Row="0" Grid.Column="3" />
+                    <local:BorderedEntry Grid.Row="1" Grid.Column="3" FontSize="10" IsEnabled="False" BackgroundColor="#A9F5E1"></local:BorderedEntry>
+                    <local:BorderedEntry Grid.Row="2" Grid.Column="3" FontSize="10" IsEnabled="False" BackgroundColor="#A9F5BC"></local:BorderedEntry>
+                    <local:BorderedEntry Grid.Row="3" Grid.Column="3" FontSize="10" IsEnabled="False" BackgroundColor="#A9F5E1"></local:BorderedEntry>
+                    <local:BorderedEntry Grid.Row="4" Grid.Column="3" FontSize="10" IsEnabled="False" BackgroundColor="#A9F5BC"></local:BorderedEntry>
+                    <local:BorderedEntry Grid.Row="5" Grid.Column="3" FontSize="10" IsEnabled="False" BackgroundColor="#A9F5E1"></local:BorderedEntry>
+                </Grid>
+
+
+            <Label x:Name="lblSubTotal" TextColor="DimGray"  FontSize="18"  WidthRequest="100" Margin="20, 0, 0, 0" HorizontalTextAlignment="Start" Text="Sub-Total"></Label>
+            <local:BorderedEntry x:Name="subtotal"  WidthRequest="360" HeightRequest="35" Margin="20, 0, 20, 0" HorizontalTextAlignment="End" Keyboard="Numeric" BackgroundColor="#F5F6CE" FontSize="10"></local:BorderedEntry>
+
+            <Label x:Name="lblDescuento" TextColor="DimGray"  FontSize="18"  WidthRequest="100" Margin="20, 0, 0, 0" HorizontalTextAlignment="Start" Text="Descuento"></Label>
+            <local:BorderedEntry x:Name="descuento"  WidthRequest="360" HeightRequest="35" Margin="20, 0, 20, 0" HorizontalTextAlignment="End" Keyboard="Numeric" BackgroundColor="#F5F6CE" FontSize="10"></local:BorderedEntry>
+                
+            <Label x:Name="lblIva" TextColor="DimGray"  FontSize="18"  WidthRequest="100" Margin="20, 0, 0, 0" HorizontalTextAlignment="Start" Text="IVA 12%"></Label>
+            <local:BorderedEntry x:Name="iva"  WidthRequest="360" HeightRequest="35" Margin="20, 0, 20, 0" HorizontalTextAlignment="End" Keyboard="Numeric" BackgroundColor="#F5F6CE" FontSize="10"></local:BorderedEntry>
+
+             <Label x:Name="lblTotal" TextColor="DimGray"  FontSize="18"  WidthRequest="100" Margin="20, 0, 0, 0" HorizontalTextAlignment="Start" Text="TOTAL"></Label>
+             <local:BorderedEntry x:Name="total"  WidthRequest="360" HeightRequest="35" Margin="20, 0, 20, 0" HorizontalTextAlignment="End" Keyboard="Numeric" BackgroundColor="#F5F6CE" FontSize="10"></local:BorderedEntry>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+    
+</ContentPage>

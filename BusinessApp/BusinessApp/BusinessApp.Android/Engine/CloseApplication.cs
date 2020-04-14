@@ -9,9 +9,11 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using BusinessApp.Droid.Engine;
 using BusinessApp.Engine;
 using Xamarin.Forms;
 
+[assembly: Xamarin.Forms.Dependency(typeof(CloseApplication))]
 namespace BusinessApp.Droid.Engine
 {
     public class CloseApplication : ICloseApplication

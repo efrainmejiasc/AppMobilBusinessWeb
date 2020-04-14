@@ -1,11 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:BusinessApp"
              x:Class="BusinessApp.MainPage">
 
-    <StackLayout>
-        <Image x:Name="logo"  Source="logoTuIdentidad.jpg"/>
-    </StackLayout>
+    <MasterDetailPage.Master >
+        <ContentPage Title="Menu" BackgroundColor="#5e5a5a" Padding="0,40,0,0" >
+            <StackLayout>
+                <Label Text="Menu" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="White"/>
+                <ListView x:Name="LstMenu" BackgroundColor="#085CA6" ItemSelected="LstMenu_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ImageCell TextColor="White" DetailColor="Black" Height="25" 
+                                   Text="{Binding MenuTitle}"
+                                   Detail="{Binding  MenuDetail}"
+                                   ImageSource="{Binding  icon}">
+                            </ImageCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
 
-</ContentPage>
+  
+</MasterDetailPage>
+

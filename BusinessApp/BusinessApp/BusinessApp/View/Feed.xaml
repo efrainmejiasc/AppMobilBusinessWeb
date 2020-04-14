@@ -4,7 +4,7 @@
              x:Class="BusinessApp.View.Feed">
     <ContentPage.Content>
         <StackLayout>
-            <Image x:Name="logo"  Source="logoTuIdentidad.jpg"/>
+            <Image x:Name="logo"  Source="logo.jpg"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

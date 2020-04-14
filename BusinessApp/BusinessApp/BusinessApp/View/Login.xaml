@@ -1,12 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BusinessApp.ViewModels"
              x:Class="BusinessApp.View.Login">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Autentificacion"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="18" />
+                <local:BorderedEntry x:Name="user" Placeholder="Ingrese usuario o email"  VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand"  WidthRequest="300" Margin="35, 0, 35, 0" HorizontalTextAlignment="Center" ></local:BorderedEntry>
+                <local:BorderedEntry x:Name="password"  IsPassword="true" Placeholder="Ingrese contraseña"  VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand"  WidthRequest="300" Margin="35, 0, 35, 0"  HorizontalTextAlignment="Center"></local:BorderedEntry>
+                <Button x:Name="btnLogin" Text="Enviar" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  WidthRequest="300" BackgroundColor="DodgerBlue" TextColor="Silver"></Button>
+                
+                <Button x:Name="btnRegistrar" Text="No tienes cuenta registrate" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  WidthRequest="300" BackgroundColor="White" TextColor="DodgerBlue" Clicked="RegistrarUsuario"></Button>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

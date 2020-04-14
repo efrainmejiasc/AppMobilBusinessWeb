@@ -15,6 +15,12 @@ namespace BusinessApp.View
 		public Login ()
 		{
 			InitializeComponent ();
-		}
-	}
+            btnRegistrar.Clicked += RegistrarUsuario;
+        }
+
+        private void RegistrarUsuario (object sender, EventArgs e)
+        {
+            ((NavigationPage)this.Parent).PushAsync(new RegistroUsuario());
+        }
+    }
 }

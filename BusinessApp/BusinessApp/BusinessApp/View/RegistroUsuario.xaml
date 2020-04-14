@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BusinessApp.ViewModels"
+             x:Class="BusinessApp.View.RegistroUsuario">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="5, 5, 5, 5">
+                <Label Text="Nuevo Usuario"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="18" />
+                <local:BorderedEntry x:Name="nombre" Placeholder="Ingrese Nombre"  VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand"  WidthRequest="320" Margin="35, 0, 35, 0" HorizontalTextAlignment="Center"></local:BorderedEntry>
+                <local:BorderedEntry x:Name="apellido" Placeholder="Ingrese Apellido"  VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand"  WidthRequest="320" Margin="35, 0, 35, 0" HorizontalTextAlignment="Center"></local:BorderedEntry>
+                <local:BorderedEntry x:Name="usuario" Placeholder="Ingrese Nombre de Usuario"  VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand"  WidthRequest="320" Margin="35, 0, 35, 0" HorizontalTextAlignment="Center"></local:BorderedEntry>
+                <local:BorderedEntry x:Name="email" Placeholder="Ingrese Email"  VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand"  WidthRequest="320" Margin="35, 0, 35, 0" HorizontalTextAlignment="Center"></local:BorderedEntry>
+                <local:BorderedEntry x:Name="password" Placeholder="Ingrese Contraseña"  IsPassword="true"  VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand"  WidthRequest="320" Margin="35, 0, 35, 0" HorizontalTextAlignment="Center"></local:BorderedEntry>
+                <local:BorderedEntry x:Name="password2" Placeholder="Confirme Contraseña" IsPassword="true"  VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand"  WidthRequest="320" Margin="35, 0, 35, 0" HorizontalTextAlignment="Center"></local:BorderedEntry>
+                <Button x:Name="btnLogin" Text="Enviar" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  WidthRequest="320" BackgroundColor="DodgerBlue" TextColor="Silver" Clicked="RegistrarUsuario"></Button>
+                <Button x:Name="btnCancelar" Text="Cancelar" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  WidthRequest="320" BackgroundColor="DodgerBlue" TextColor="Silver" Clicked="Cancelar"></Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -2,7 +2,6 @@
 using System.Configuration;
 using System.Collections.Generic;
 using System.Text;
-using PCLAppConfig;
 
 namespace BusinessApp.Engine
 {
@@ -18,7 +17,7 @@ namespace BusinessApp.Engine
             return valor;
         }
 
-        public static string UrlBase = ConfigurationManager.AppSettings["URL_BASE"];
+        public static string UrlBase = "http://joselelu-001-site2.etempurl.com/api/";
 
         public static string NombreBaseDatos = "AppBusiness.db";
         public static string Folder = System.Environment.GetFolderPath(Environment.SpecialFolder.Personal);
